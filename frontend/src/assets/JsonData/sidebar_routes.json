@@ -12,7 +12,7 @@
 
   {
     "display_name": "Store",
-    "route": "/inventory",
+    "route": "/store",
     "icon": "bx bx-store-alt"
   },
   

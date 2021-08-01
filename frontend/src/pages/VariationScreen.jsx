@@ -151,7 +151,7 @@ const ProductVariationScreen = ({ match, history, heading }) => {
         initialValues={{
           name_ar: productVariations.bio_ar || '',
           name_en: productVariations.bio_en || '',
-          images: formikFileArray || '',
+          images: '',
           price: productVariations.price || '',
           offerprice: productVariations.offerprice || '',
 

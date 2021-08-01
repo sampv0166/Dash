@@ -56,12 +56,12 @@ const EditProductScreen = ({ match, history }) => {
         if (product.id == productId) {
           setCurrentProduct(product);
           setProductVariations(product.variations);
-          console.log(productVariations);
+          //console.log(productVariations);
           product.variations.map((variations) => {
             setImages(variations.images);
             setVariationId(variations.id);
 
-            console.log(variationId);
+           // console.log(variationId);
             // console.log(images);
             variations.images.map((variationimages) => {
               // console.log(variationimages);
@@ -167,7 +167,7 @@ const EditProductScreen = ({ match, history }) => {
         >
           {(formik) => (
             <div className="my-4">
-              {console.log(formik.values)}
+            
               <div className="row">
                 <div className="col-5">
                   {productId ? (
@@ -291,7 +291,7 @@ const EditProductScreen = ({ match, history }) => {
                         {productId ? <strong>Variations</strong> : ''}
                         {productVariations.map((pv) => (
                           <Col>
-                            {console.log(pv)}
+                          
                             <Link to={`/variations/${productId}/${pv.id}`}>
                               <Card
                                 className="my-2 p-1 rounded"

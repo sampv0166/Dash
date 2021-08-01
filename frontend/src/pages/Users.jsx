@@ -7,6 +7,7 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import { getUsers } from './api/users';
 import { Link } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
 
 const customerTableHead = ['', 'name', 'email', 'User', ' ', ' ', ' '];
 
@@ -52,8 +53,13 @@ const Customers = () => {
   };
 
   return (
+
     <div>
-      <h2 className="page-header">customers</h2>
+      <h2 className="page-header">Users</h2>
+      <Link to="/addnewuser">
+        <Button className='my-2'>Add New User</Button>
+      </Link>
+
       <div className="row">
         <div className="col-12">
           <div className="card">
@@ -82,7 +88,7 @@ const Customers = () => {
                             </Link>
                           </td>
                           <td>
-                            <Link to={`/permissions/${item.id}`}>
+                            <Link to={`/edituser/${item.id}`}>
                               <i className="bx bx-pencil"></i>
                             </Link>
                           </td>

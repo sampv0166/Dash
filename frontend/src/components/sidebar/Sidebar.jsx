@@ -31,7 +31,7 @@ const Sidebar = props => {
     return (
         <div className='sidebar'>
             <div className="sidebar__logo">
-                <img src={logo} alt="company logo" />
+                <h3>KhyamatZaman</h3>
             </div>
             {
                 sidebar_items.map((item, index) => (

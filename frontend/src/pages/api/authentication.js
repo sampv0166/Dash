@@ -2,10 +2,10 @@ import axios from 'axios';
 
 //#Registration
 //POST /api/v2/public/register
-export const userRegister = ({ values }) => {
+export const userRegister = ({ name,email,password,photo }) => {
   try {
-    axios.post('/api/v2/public/register', { values }).then((res) => {
-      console.log('User Registered sucessfully');
+    axios.post('https://www.khaymatapi.mvp-apps.ae/api/v2/public/register', { name,email,password,photo }).then((res) => {
+      console.log(res);
     });
   } catch (e) {
     console.log(e);

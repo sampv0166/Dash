@@ -10,6 +10,8 @@ import PermissionScreen from '../pages/PermissionScreen';
 import ProductScreen from '../pages/ProductScreen';
 import EditProductScreen from '../pages/EditProductScreen'
 import VariationScreen from '../pages/VariationScreen'
+import AddNewUserScreen from '../pages/AddNewUserScreen';
+import CategoryScreen from '../pages/CategoryScreen';
 
 const Routes = () => {
   const { user, setUser } = useUserInfo();
@@ -31,6 +33,9 @@ const Routes = () => {
       <PrivateRoute path="/product/:id" exact component={EditProductScreen} />
       <PrivateRoute path="/variations/:id/:variationId" exact component={VariationScreen} />
       <PrivateRoute path="/variations/:id" exact component={VariationScreen} />
+      <PrivateRoute path="/addnewuser" exact component={AddNewUserScreen} />
+      <PrivateRoute path="/edituser/:id" exact component={AddNewUserScreen} />
+      <PrivateRoute path="/categories" exact component={CategoryScreen} />
     </Switch>
   );
 };
